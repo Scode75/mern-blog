@@ -9,7 +9,7 @@ function PostPage() {
     const {userInfo} = useContext(UserContext);
     const {id} = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/post/${id}`)
+        fetch(`https://api-service-afvl.onrender.com/post/${id}`)
         .then(response => {
             response.json().then(postInfo => {
                 setPostInfo(postInfo);
@@ -36,7 +36,7 @@ function PostPage() {
             </div>
          )}
         <div className="image">
-            <img src={`http://localhost:5000/${postInfo.cover}`} alt="" />
+            <img src={`https://api-service-afvl.onrender.com/${postInfo.cover}`} alt="" />
         </div>
         <div className="content" dangerouslySetInnerHTML={{__html:postInfo.content}} />
     </div>
