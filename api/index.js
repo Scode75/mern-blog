@@ -148,7 +148,7 @@ app.put('/post', uploadMiddleware.single('file'), async (req, res) => {
     });
 });
 
-app.listen("https://api-service-afvl.onrender.com", ()=>{
+app.listen("5000", ()=>{
     console.log("Backend is running.")
 }); 
 
