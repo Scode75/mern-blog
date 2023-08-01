@@ -5,7 +5,7 @@ import { UserContext } from './UserContext';
 function Header() {
   const {setUserInfo, userInfo} = useContext(UserContext);
   useEffect(() => {
-    fetch('http://localhost:5000/profile', {
+    fetch('https://api-service-afvl.onrender.com/profile', {
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
@@ -15,7 +15,7 @@ function Header() {
   }, []);
 
   function logout(){
-    fetch('http://localhost:5000/logout', {
+    fetch('https://api-service-afvl.onrender.com/logout', {
       credentials: 'include',
       method: 'POST',
     });
