@@ -8,7 +8,7 @@ function RegisterPage() {
 
     async function register(ev){
         ev.preventDefault();
-            const response = await fetch ('http://localhost:5000/register', {
+            const response = await fetch ('https://api-service-afvl.onrender.com/register', {
             method: 'POST',
              body: JSON.stringify({username, password, fullname}),
             headers: {'Content-Type':'application/json'},
