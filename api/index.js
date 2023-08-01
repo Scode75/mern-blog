@@ -31,7 +31,7 @@ database.once('connected', () => {
     console.log('Database Connected');
 });
 
-app.use(cors({credentials:true, origin:'http://localhost:3000'}));
+app.use(cors({credentials:true, origin:'https://steve-blog-d32d.onrender.com'}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
@@ -148,7 +148,7 @@ app.put('/post', uploadMiddleware.single('file'), async (req, res) => {
     });
 });
 
-app.listen("5000", ()=>{
+app.listen("https://api-service-afvl.onrender.com", ()=>{
     console.log("Backend is running.")
 }); 
 
