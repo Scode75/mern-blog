@@ -4,7 +4,7 @@ import Post from '../Post'
 function IndexPage() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/post').then(response => {
+    fetch('https://api-service-afvl.onrender.com/post').then(response => {
       response.json().then(posts => {
         setPosts(posts);
       });
